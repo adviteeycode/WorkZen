@@ -1,16 +1,126 @@
-# workzen
+# 🚀 WorkZen HRMS  
+### A Modern Human Resource Management System – Built with Flutter Web
 
-A new Flutter project.
+🌐 **Live Demo:**  
+➡️ https://workzenhrms.netlify.app
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 Overview  
+**WorkZen HRMS** is a modern and lightweight Human Resource Management System built using **Flutter**.  
+It helps organizations efficiently manage:
 
-A few resources to get you started if this is your first Flutter project:
+- Employee records  
+- Attendance  
+- Payroll  
+- Leave workflows  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+WorkZen also includes **role-based access control** for Admins, HR Managers, Payroll Officers, and Employees.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## ✨ Features
+
+### 👥 User & Role Management
+- Create and manage users  
+- Supports roles:
+  - Admin  
+  - HR Officer  
+  - Payroll Officer  
+  - Employee  
+- Restrict functionalities based on role permissions  
+
+---
+
+### 🕒 Attendance Management
+- Employee Check-In / Check-Out  
+- Track daily and monthly attendance  
+- Leave request integration  
+
+---
+
+### 📝 Leave Management
+- Employees can apply for leave  
+- HR Officer can approve or reject requests  
+- Includes leave history  
+
+---
+
+### 💰 Payroll System
+- Monthly payroll processing  
+- Auto-calculation includes:
+  - Basic salary  
+  - Deductions  
+  - PF contribution  
+  - Professional tax  
+- Generate downloadable payslips  
+- Supports monthly payruns  
+
+---
+
+### 📊 Dashboard & Analytics
+- Attendance charts  
+- Employee directory  
+- Payroll summaries  
+- Quick insights for HR & Admin  
+
+---
+
+## 🔐 Role Permissions
+
+| Role              | Permissions |
+|-------------------|-------------|
+| **Admin**         | Full control of system & user management |
+| **HR Officer**    | Employee records, leave approvals, attendance tracking |
+| **Payroll Officer** | Salary processing, payslip generation |
+| **Employee**      | View attendance, apply leave, view payroll |
+
+---
+
+## 📘 HRMS Terms (Simplified)
+
+- **Payroll:** Monthly salary processing  
+- **Payslip:** Salary breakdown  
+- **Time-Off:** Leave days  
+- **Payrun:** Monthly payroll cycle  
+- **PF Contribution:** Mandatory retirement fund deduction  
+- **Professional Tax:** State employment tax  
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology |
+|--------------|------------|
+| Frontend     | Flutter  |
+| Database     | Firebase |
+| Deployment   | Netlify |
+
+---
+
+## 📂 Folder Structure (Simplified)
+```text
+lib/
+ ├── 🎨 theme/        # App themes & styling  
+ ├── 🖥️ screens/      # UI Screens & Pages  
+ ├── ⚙️ providers/    # State Management Layer  
+ ├── 🧩 widgets/      # Reusable Widgets  
+ └── 🚀 main.dart     # App Entry Point
+```
+
+
+---
+
+## 🚀 Deployment  
+WorkZen HRMS is live at:
+
+👉 https://workzenhrms.netlify.app
+
+---
+
+## 📄 License  
+This project is intended for personal and educational use unless otherwise specified.
+
+---
+
+
