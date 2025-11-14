@@ -88,6 +88,15 @@ WorkZen also includes **role-based access control** for Admins, HR Managers, Pay
 
 ---
 
+## 📐 Wireframes
+
+Below is the initial wireframe used to design **WorkZen HRMS**.  
+This wireframe helped visualize the core user flows such as login, dashboard navigation, attendance tracking, and employee management.
+
+<img src="assets/wireframe/workzen-wireframe.svg">
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer        | Technology |
@@ -98,12 +107,14 @@ WorkZen also includes **role-based access control** for Admins, HR Managers, Pay
 
 ---
 
-## 📂 Folder Structure (Simplified)
+## 📂 Folder Structure
 ```text
 lib/
- ├── 🎨 theme/        # App themes & styling  
- ├── 🖥️ screens/      # UI Screens & Pages  
- ├── ⚙️ providers/    # State Management Layer  
+ ├── 🎨 theme/        # App themes & styling
+ ├── ⚙️ route/        # App themes & styling 
+ ├── 🖥️ home/      # Home
+ |       ├── ui
+ |       ├── provider 
  ├── 🧩 widgets/      # Reusable Widgets  
  └── 🚀 main.dart     # App Entry Point
 ```
