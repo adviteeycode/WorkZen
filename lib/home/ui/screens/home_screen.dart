@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:workzen/attendance/ui/widgets/attendance.dart';
 import 'package:workzen/employee/ui/widgets/employee.dart';
 import 'package:workzen/home/ui/widgets/check_in_and_out.dart';
@@ -7,7 +6,9 @@ import 'package:workzen/home/ui/widgets/company_logo.dart';
 import 'package:workzen/home/ui/widgets/custom_searchbar.dart';
 import 'package:workzen/home/ui/widgets/profile_icon.dart';
 import 'package:workzen/home/ui/widgets/tab_card.dart';
-import 'package:workzen/theme/provider/theme_provider.dart';
+import 'package:workzen/payroll/widget/payroll_dashboard.dart';
+import 'package:workzen/report/widget/report.dart';
+import 'package:workzen/setting/widget/setting.dart';
 import 'package:workzen/timeoff/ui/widgets/time_off.dart';
 import 'package:workzen/user_role.dart';
 
@@ -80,11 +81,48 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         );
       case 3:
-        return Expanded(child: Center(child: Text('Payroll Header')));
+        return PayrollHeader(
+          searchBar: CustomSearchbar(
+            controller: searchController,
+            onChanged: (val) {
+              val = searchController.text;
+              setState(() {});
+            },
+            onClear: () {
+              searchController.clear();
+              setState(() {});
+            },
+          ),
+        );
       case 4:
-        return Expanded(child: Center(child: Text('Reports Header')));
+        return ReportHeader(
+          searchBar: CustomSearchbar(
+            controller: searchController,
+            onChanged: (val) {
+              val = searchController.text;
+              setState(() {});
+            },
+            onClear: () {
+              searchController.clear();
+              setState(() {});
+            },
+          ),
+        );
       case 5:
-        return Expanded(child: Center(child: Text('Settings Header')));
+        return SettingHeader(
+          role: UserRole.employee,
+          searchBar: CustomSearchbar(
+            controller: searchController,
+            onChanged: (val) {
+              val = searchController.text;
+              setState(() {});
+            },
+            onClear: () {
+              searchController.clear();
+              setState(() {});
+            },
+          ),
+        );
       default:
         return Expanded(child: SizedBox());
     }
@@ -100,11 +138,11 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return TimeOffBody(role: UserRole.employee);
       case 3:
-        return Center(child: Text('Payroll Content'));
+        return PayrollBody();
       case 4:
-        return Center(child: Text('Reports Content'));
+        return ReportBody();
       case 5:
-        return Center(child: Text('Settings Content'));
+        return SettingBody(role: UserRole.employee);
       default:
         return Center(child: Text('Unknown Tab'));
     }
@@ -114,10 +152,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: Provider.of<ThemeProvider>(context).toggleTheme,
-        child: Icon(Icons.dark_mode),
-      ),
       body: Column(
         children: [
           Expanded(
