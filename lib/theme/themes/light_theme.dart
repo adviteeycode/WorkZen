@@ -1,99 +1,47 @@
 import 'package:flutter/material.dart';
 
-ThemeData lightTheme = ThemeData.light().copyWith(
+final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  scaffoldBackgroundColor: const Color(0xFFF7F7F7),
+  scaffoldBackgroundColor: const Color(0xFFF5F5F7),
 
-  // ------------------- Text Theme -------------------
+  colorScheme: const ColorScheme.light(
+    primary: Color(0xFF6B63FF),
+    secondary: Color(0xFF8F85FF),
+    surface: Colors.white,
+    surfaceVariant: Color(0xFFF0F0F4),
+    background: Color(0xFFF5F5F7),
+    outline: Color(0xFFCED0D6),
+    outlineVariant: Color(0xFFE2E4E8),
+    onSurface: Colors.black,
+    onBackground: Colors.black,
+    onPrimary: Colors.white,
+  ),
+
+  // ---------------- TEXT ----------------
   textTheme: const TextTheme(
-    // ---------------- Display Styles ----------------
-    displayLarge: TextStyle(
-      fontSize: 57,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
-    ),
-    displayMedium: TextStyle(
-      fontSize: 45,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
-    ),
-    displaySmall: TextStyle(
-      fontSize: 36,
-      fontWeight: FontWeight.w700,
-      color: Colors.black,
-    ),
-
-    // ---------------- Headline Styles ----------------
     headlineLarge: TextStyle(
-      fontSize: 32,
+      fontSize: 30,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
     headlineMedium: TextStyle(
-      fontSize: 28,
+      fontSize: 26,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
-    headlineSmall: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.w600,
-      color: Colors.black,
-    ),
-
-    // ---------------- Title Styles ----------------
-    titleLarge: TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
-    ),
-    titleMedium: TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      color: Colors.black87,
-    ),
-    titleSmall: TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-      color: Colors.black54,
-    ),
-
-    // ---------------- Body Styles ----------------
     bodyLarge: TextStyle(
       fontSize: 16,
-      color: Colors.black87,
       fontWeight: FontWeight.w500,
-    ),
-    bodyMedium: TextStyle(
-      fontSize: 14,
-      color: Colors.black87,
-      fontWeight: FontWeight.w400,
-    ),
-    bodySmall: TextStyle(fontSize: 12, color: Colors.black54),
-
-    // ---------------- Label Styles ----------------
-    labelLarge: TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
-      color: Colors.black,
-    ),
-    labelMedium: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w600,
       color: Colors.black87,
     ),
-    labelSmall: TextStyle(
-      fontSize: 11,
-      fontWeight: FontWeight.w500,
-      color: Colors.black54,
-    ),
+    bodyMedium: TextStyle(fontSize: 14, color: Colors.black54),
   ),
 
-  // ------------------- AppBar Theme -------------------
+  // ---------------- APPBAR ----------------
   appBarTheme: const AppBarTheme(
     elevation: 0,
-    centerTitle: true,
     backgroundColor: Colors.white,
-    foregroundColor: Colors.black,
+    surfaceTintColor: Colors.transparent,
     titleTextStyle: TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w600,
@@ -101,37 +49,38 @@ ThemeData lightTheme = ThemeData.light().copyWith(
     ),
   ),
 
-  // ------------------- Elevated Button Theme -------------------
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      backgroundColor: const Color(0xFF6C63FF),
-      foregroundColor: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      elevation: 2,
-    ),
-  ),
-
-  // ------------------- Input Field Theme -------------------
+  // ---------------- INPUT ----------------
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: Colors.white,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: Colors.black12),
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(color: Color(0xFFD6D6D6)),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: Color(0xFF6C63FF), width: 1.5),
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(color: Color(0xFF6B63FF), width: 1.4),
+    ),
+    labelStyle: const TextStyle(color: Colors.black54),
+  ),
+
+  // ---------------- BUTTONS ----------------
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: const Color(0xFF6B63FF),
+      foregroundColor: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+      elevation: 3,
+      shadowColor: const Color(0xFF6B63FF).withOpacity(0.25),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
     ),
   ),
 
-  // ------------------- Card Theme -------------------
+  // ---------------- CARD ----------------
   cardTheme: CardThemeData(
     color: Colors.white,
-    elevation: 2,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-    margin: const EdgeInsets.all(8),
+    elevation: 4,
+    shadowColor: Colors.black.withOpacity(0.07),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
   ),
 );

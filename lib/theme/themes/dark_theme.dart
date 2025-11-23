@@ -1,98 +1,47 @@
 import 'package:flutter/material.dart';
 
-ThemeData darkTheme = ThemeData.dark().copyWith(
+final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: const Color(0xFF0F0F0F),
+  scaffoldBackgroundColor: const Color(0xFF0D0D0D),
 
-  // ------------------- Text Theme -------------------
+  colorScheme: const ColorScheme.dark(
+    primary: Color(0xFF716BFF),
+    secondary: Color(0xFF8F85FF),
+    surface: Color(0xFF121212),
+    surfaceVariant: Color(0xFF1B1B1B),
+    background: Color(0xFF0D0D0D),
+    outline: Color(0xFF2C2C2C),
+    outlineVariant: Color(0xFF3A3A3A),
+    onSurface: Colors.white,
+    onBackground: Colors.white,
+    onPrimary: Colors.white,
+  ),
+
+  // ---------------- TEXT TYPOGRAPHY ----------------
   textTheme: const TextTheme(
-    // ---------------- Display Styles ----------------
-    displayLarge: TextStyle(
-      fontSize: 57,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),
-    displayMedium: TextStyle(
-      fontSize: 45,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),
-    displaySmall: TextStyle(
-      fontSize: 36,
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
-    ),
-
-    // ---------------- Headline Styles ----------------
     headlineLarge: TextStyle(
-      fontSize: 32,
+      fontSize: 30,
       fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
     headlineMedium: TextStyle(
-      fontSize: 28,
+      fontSize: 26,
       fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
-    headlineSmall: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.w600,
-      color: Colors.white,
-    ),
-
-    // ---------------- Title Styles ----------------
-    titleLarge: TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),
-    titleMedium: TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      color: Colors.white,
-    ),
-    titleSmall: TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-      color: Colors.white70,
-    ),
-
-    // ---------------- Body Styles ----------------
     bodyLarge: TextStyle(
       fontSize: 16,
-      color: Colors.white,
       fontWeight: FontWeight.w500,
-    ),
-    bodyMedium: TextStyle(
-      fontSize: 14,
-      color: Colors.white70,
-      fontWeight: FontWeight.w400,
-    ),
-    bodySmall: TextStyle(fontSize: 12, color: Colors.white54),
-
-    // ---------------- Label Styles ----------------
-    labelLarge: TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
-    labelMedium: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w600,
-      color: Colors.white70,
-    ),
-    labelSmall: TextStyle(
-      fontSize: 11,
-      fontWeight: FontWeight.w500,
-      color: Colors.white54,
-    ),
+    bodyMedium: TextStyle(fontSize: 14, color: Colors.white70),
   ),
-  // ------------------- AppBar Theme -------------------
+
+  // ---------------- APPBAR ----------------
   appBarTheme: const AppBarTheme(
     elevation: 0,
-    centerTitle: true,
-    backgroundColor: Color(0xFF151515),
-    foregroundColor: Colors.white,
+    backgroundColor: Color(0xFF111111),
+    surfaceTintColor: Colors.transparent,
     titleTextStyle: TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w600,
@@ -100,43 +49,39 @@ ThemeData darkTheme = ThemeData.dark().copyWith(
     ),
   ),
 
-  // ------------------- Elevated Button Theme -------------------
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      backgroundColor: const Color(0xFF6C63FF),
-      foregroundColor: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      textStyle: const TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w600,
-        color: Colors.white,
-      ),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      elevation: 2,
-    ),
-  ),
-
-  // ------------------- Input Field Theme -------------------
+  // ---------------- INPUT FIELDS ----------------
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: const Color(0xFF1A1A1A),
+    fillColor: const Color(0xFF181818),
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: Colors.white24),
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(color: Color(0xFF2F2F2F)),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: Color(0xFF6C63FF), width: 1.5),
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(color: Color(0xFF716BFF), width: 1.4),
     ),
-    hintStyle: const TextStyle(color: Colors.white38),
     labelStyle: const TextStyle(color: Colors.white70),
+    hintStyle: const TextStyle(color: Colors.white38),
   ),
 
-  // ------------------- Card Theme -------------------
+  // ---------------- BUTTONS ----------------
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+      backgroundColor: const Color(0xFF716BFF),
+      foregroundColor: Colors.white,
+      elevation: 4,
+      shadowColor: const Color(0xFF716BFF).withOpacity(0.3),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    ),
+  ),
+
+  // ---------------- CARD ----------------
   cardTheme: CardThemeData(
-    color: const Color(0xFF1A1A1A),
-    elevation: 2,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-    margin: const EdgeInsets.all(8),
+    color: const Color(0xFF161616),
+    elevation: 6,
+    shadowColor: Colors.black.withOpacity(0.2),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
   ),
 );

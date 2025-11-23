@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892445082720",
+    "project_id": "workzen-72a11",
+    "storage_bucket": "workzen-72a11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892445082720:android:53845a1750dbb75eca2f05",
+        "android_client_info": {
+          "package_name": "com.example.workzen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5hP-l0FuXFWMkOe-bMmahVqqJ_KBpa5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
